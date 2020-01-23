@@ -7,6 +7,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class facture {
     private WebDriver driver;
@@ -21,7 +23,7 @@ public class facture {
         //System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         //driver = new ChromeDriver();
         baseUrl = "https://www.google.com/";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
     }
 
     @Test
@@ -41,7 +43,9 @@ public class facture {
         driver.findElement(By.id("name")).sendKeys("tiers_facture");
         driver.findElement(By.id("select2-selectcountry_id-container")).click();
         driver.findElement(By.name("create")).click();
+        WebDriverWait wait = new WebDriverWait(driver,45);
         driver.findElement(By.id("reButtonNow")).click();
+        WebDriverWait wait2 = new WebDriverWait(driver,45);
         driver.findElement(By.id("selectmode_reglement_id")).click();
         new Select(driver.findElement(By.id("selectmode_reglement_id"))).selectByVisibleText("Carte bancaire");
         driver.findElement(By.id("selectmode_reglement_id")).click();
