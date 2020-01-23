@@ -7,7 +7,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class testInitial {
+public class CreerContactInvalide {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -17,48 +17,23 @@ public class testInitial {
     public void setUp() throws Exception {
         String s = System.setProperty("webdriver.gecko.driver", "C:\\firefoxDriver\\geckodriver.exe");
         driver = new FirefoxDriver();
+
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @Test
-    public void testInitial() throws Exception {
+    public void testCreerContactInvalide() throws Exception {
         driver.get("http://10.131.1.32/dolibarr-10.0.6/dolibarr-10.0.6/htdocs/index.php");
         driver.findElement(By.id("username")).clear();
         driver.findElement(By.id("username")).sendKeys("test");
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("test");
-        driver.findElement(By.xpath("//input[@class='button']")).click();
-        driver.findElement(By.linkText("Utilisateurs & Groupes")).click();
-        driver.findElement(By.linkText("Nouvel utilisateur")).click();
-        driver.findElement(By.id("lastname")).clear();
-        driver.findElement(By.id("lastname")).sendKeys("new");
-        driver.findElement(By.name("login")).click();
-        driver.findElement(By.name("login")).clear();
-        driver.findElement(By.name("login")).sendKeys("new");
-        driver.findElement(By.name("password")).click();
-
-        // ERROR: Caught exception [ERROR: Unsupported command [doubleClick | name=password | ]]
-        driver.findElement(By.name("password")).clear();
-        driver.findElement(By.name("password")).sendKeys("new");
-        driver.findElement(By.id("admin")).click();
-        driver.findElement(By.id("admin")).click();
-        driver.findElement(By.name("create")).click();
-        driver.findElement(By.linkText("Liste des utilisateurs")).click();
-        driver.findElement(By.xpath("//a[@id='mainmenua_commercial']/span")).click();
-        driver.findElement(By.linkText("Nouvelle commande")).click();
-        driver.findElement(By.xpath("//div[@id='id-right']/div/form/div[2]/table/tbody/tr[3]/td[2]/a/span")).click();
-        driver.findElement(By.id("name")).clear();
-        driver.findElement(By.id("name")).sendKeys("Nike");
-        driver.findElement(By.id("customerprospect")).click();
-        new Select(driver.findElement(By.id("customerprospect"))).selectByVisibleText("Client");
-        driver.findElement(By.id("customerprospect")).click();
-        driver.findElement(By.name("create")).click();
-        driver.findElement(By.xpath("//div[@id='id-right']/div/form/div[2]/table/tbody/tr[4]/td[2]/span/span/span/span[2]/b")).click();
-        driver.findElement(By.xpath("//div[@id='id-right']/div/form/div[2]/table/tbody/tr[4]/td[2]/span/span/span/span[2]/b")).click();
-        driver.findElement(By.name("bouton")).click();
-        driver.findElement(By.linkText("Liste")).click();
+        driver.findElement(By.xpath("//input[@value='  Se connecter  ']")).click();
+        driver.findElement(By.xpath("//li[@id='mainmenutd_companies']/div/a/div")).click();
+        driver.findElement(By.linkText("Nouveau Contact/Adresse")).click();
+        driver.findElement(By.name("add")).click();
         try {
-            assertEquals(driver.findElement(By.xpath("//td[@class='left']")).getText(), "Total pour cette page");
+            assertEquals(driver.findElement(By.xpath("//div[contains(text(),\"Le champ 'Nom / Libellé' est obligatoire\")]")).getText(), "Le champ 'Nom / Libellé' est obligatoire");
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
@@ -106,3 +81,4 @@ public class testInitial {
         }
     }
 }
+
