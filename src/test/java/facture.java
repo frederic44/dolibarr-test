@@ -41,8 +41,7 @@ public class facture {
         driver.findElement(By.id("name")).sendKeys("tiers_facture");
         driver.findElement(By.id("select2-selectcountry_id-container")).click();
         driver.findElement(By.name("create")).click();
-        driver.findElement(By.xpath("//img[@alt='...']")).click();
-        driver.findElement(By.linkText("1")).click();
+        driver.findElement(By.id("reButtonNow")).click();
         driver.findElement(By.id("selectmode_reglement_id")).click();
         new Select(driver.findElement(By.id("selectmode_reglement_id"))).selectByVisibleText("Carte bancaire");
         driver.findElement(By.id("selectmode_reglement_id")).click();
@@ -63,9 +62,6 @@ public class facture {
         driver.findElement(By.id("dp_desc")).sendKeys("livre");
         driver.findElement(By.id("price_ht")).click();
         driver.findElement(By.id("price_ht")).clear();
-
-
-
         driver.findElement(By.id("price_ht")).sendKeys("100");
         driver.findElement(By.id("addline")).click();
         try {
