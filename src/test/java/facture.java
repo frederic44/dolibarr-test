@@ -16,7 +16,7 @@ public class facture {
 
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:\\firefoxDriver\\geckodriver.exe");
         driver = new FirefoxDriver();
         //System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         //driver = new ChromeDriver();
