@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="519584fe-d7a3-4026-81e4-819e9cc45a4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WhTmAiZIw8N5KDjJxLU45YOspA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.modifierEntreprise">
+    <configuration name="modifierEntreprise" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projetDolibarr" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="modifierEntreprise" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="modifierEntreprise.testModifierEntreprise" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projetDolibarr" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="modifierEntreprise" />
+      <option name="METHOD_NAME" value="testModifierEntreprise" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.modifierEntreprise" />
+        <item itemvalue="JUnit.modifierEntreprise.testModifierEntreprise" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="519584fe-d7a3-4026-81e4-819e9cc45a4f" name="Default Changelist" comment="" />
+      <created>1579600982277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579600982277</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1540" height="220" key="GridCell.Tab.0.bottom" timestamp="1579617651632">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1540" height="220" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1579617651632" />
+    <state width="1540" height="220" key="GridCell.Tab.0.center" timestamp="1579617651632">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1540" height="220" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1579617651632" />
+    <state width="1540" height="220" key="GridCell.Tab.0.left" timestamp="1579617651632">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1540" height="220" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1579617651632" />
+    <state width="1540" height="220" key="GridCell.Tab.0.right" timestamp="1579617651632">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1540" height="220" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1579617651632" />
+    <state x="447" y="178" key="Maven.ArtifactSearchDialog" timestamp="1579612182622">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="447" y="178" key="Maven.ArtifactSearchDialog/0.0.1600.860@0.0.1600.860" timestamp="1579612182622" />
+  </component>
+</project>
