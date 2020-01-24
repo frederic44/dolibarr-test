@@ -15,8 +15,8 @@ public class ScenarioComplexe {
 
     @Before
     public void setUp() throws Exception {
-        String s = System.setProperty("webdriver.gecko.driver", "C:\\firefoxDriver\\geckodriver.exe");
-        driver = new FirefoxDriver();
+        String s = System.setProperty("webdriver.chrome.driver", "C:\\firefoxDriver\\chromedriver.exe");
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
