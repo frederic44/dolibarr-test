@@ -32,30 +32,26 @@ public class modifierProspectNomValide {
         driver.findElement(By.xpath("//li[@id='mainmenutd_companies']/div/a/div")).click();
         driver.findElement(By.linkText("Nouveau tiers")).click();
         driver.findElement(By.id("name")).clear();
-        driver.findElement(By.id("name")).sendKeys("orangina");
+        driver.findElement(By.id("name")).sendKeys("aaaa");
         driver.findElement(By.id("customerprospect")).click();
         new Select(driver.findElement(By.id("customerprospect"))).selectByVisibleText("Prospect");
         driver.findElement(By.id("customerprospect")).click();
         driver.findElement(By.name("create")).click();
         driver.findElement(By.linkText("Liste")).click();
         driver.findElement(By.linkText("Liste des prospects")).click();
-        driver.findElement(By.linkText("orangina")).click();
+        driver.findElement(By.linkText("aaaa")).click();
         driver.findElement(By.linkText("MODIFIER")).click();
         driver.findElement(By.id("name")).click();
         driver.findElement(By.id("name")).clear();
-        driver.findElement(By.id("name")).sendKeys("nike");
+        driver.findElement(By.id("name")).sendKeys("aabb");
         driver.findElement(By.xpath("//div[@id='id-right']/div/form/div[2]/div/table/tbody/tr[8]/td[2]")).click();
         driver.findElement(By.name("save")).click();
-        try {
-            assertEquals(driver.findElement(By.xpath("//div[@class='fichehalfleft']//tr[1]//td[2]")).getText(), "Prospect");
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
+        
     }
 
     @After
     public void tearDown() throws Exception {
-        //driver.quit();
+        driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
