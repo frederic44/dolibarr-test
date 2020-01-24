@@ -47,7 +47,7 @@ public class modifierProspectNomValide {
         driver.findElement(By.xpath("//div[@id='id-right']/div/form/div[2]/div/table/tbody/tr[8]/td[2]")).click();
         driver.findElement(By.name("save")).click();
         try {
-            assertEquals(driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[2]/div[3]/div[1]/table/tbody/tr[1]/td[2]")).getText(), "Prospect");
+            assertEquals(driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[2]/div[3]/div[1]/table/tbody/tr[2]/td[1]")).getText(), "Code client");
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
