@@ -1,4 +1,4 @@
-package com.example.tests;
+
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -25,56 +25,33 @@ public class tiers {
 
     @Test
     public void testNouveauTiers() throws Exception {
-        driver.get("http://10.131.1.32/dolibarr-10.0.6/dolibarr-10.0.6/htdocs/");
+        driver.get("http://10.131.1.32/dolibarr-10.0.6/dolibarr-10.0.6/htdocs/index.php");
         driver.findElement(By.id("username")).click();
         driver.findElement(By.id("username")).clear();
         driver.findElement(By.id("username")).sendKeys("test");
-        driver.findElement(By.id("login_line1")).click();
         driver.findElement(By.id("password")).click();
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("test");
         driver.findElement(By.xpath("//input[@class='button']")).click();
-        driver.findElement(By.xpath("//a[@id='mainmenua_companies']/span")).click();
+        driver.findElement(By.xpath("//li[@id='mainmenutd_companies']/div/a/div")).click();
         driver.findElement(By.linkText("Nouveau tiers")).click();
         driver.findElement(By.id("name")).clear();
-        driver.findElement(By.id("name")).sendKeys("premier tiers");
-        driver.findElement(By.id("name_alias_input")).click();
-        driver.findElement(By.id("name_alias_input")).clear();
-        driver.findElement(By.id("name_alias_input")).sendKeys("m2i");
+        driver.findElement(By.id("name")).sendKeys("test");
         driver.findElement(By.id("customerprospect")).click();
         new Select(driver.findElement(By.id("customerprospect"))).selectByVisibleText("Prospect");
         driver.findElement(By.id("customerprospect")).click();
-        driver.findElement(By.id("fournisseur")).click();
-        new Select(driver.findElement(By.id("fournisseur"))).selectByVisibleText("Oui");
-        driver.findElement(By.id("fournisseur")).click();
-        driver.findElement(By.id("status")).click();
-        driver.findElement(By.id("status")).click();
-        driver.findElement(By.id("address")).click();
-        driver.findElement(By.id("address")).clear();
-        driver.findElement(By.id("address")).sendKeys("rue du sillon de bretagne");
-        driver.findElement(By.id("zipcode")).clear();
-        driver.findElement(By.id("zipcode")).sendKeys("44000");
-        driver.findElement(By.id("town")).clear();
-        driver.findElement(By.id("town")).sendKeys("saint herblain");
-        driver.findElement(By.id("email")).clear();
-        driver.findElement(By.id("email")).sendKeys("contact@m2i.com");
-        driver.findElement(By.id("phone")).clear();
-        driver.findElement(By.id("phone")).sendKeys("0699887755");
-        driver.findElement(By.id("zipcode")).click();
-        driver.findElement(By.id("zipcode")).click();
-        driver.findElement(By.xpath("//div[@id='id-right']/div/form/div[2]/table/tbody/tr[9]/td")).click();
-        driver.findElement(By.id("name_alias")).click();
-        driver.findElement(By.xpath("//div[@id='id-right']/div/form/div[2]/table/tbody/tr/td[2]")).click();
-        driver.findElement(By.id("capital")).click();
-        driver.findElement(By.id("capital")).clear();
-        driver.findElement(By.id("capital")).sendKeys("50");
-        driver.findElement(By.id("typent_id")).click();
-        new Select(driver.findElement(By.id("typent_id"))).selectByVisibleText("PME/PMI");
-        driver.findElement(By.id("typent_id")).click();
-        driver.findElement(By.id("effectif_id")).click();
-        new Select(driver.findElement(By.id("effectif_id"))).selectByVisibleText("1 - 5");
-        driver.findElement(By.id("effectif_id")).click();
+        driver.findElement(By.id("idprof1")).click();
+        driver.findElement(By.id("idprof1")).clear();
+        driver.findElement(By.id("idprof1")).sendKeys("test");
+        driver.findElement(By.id("idprof3")).click();
+        driver.findElement(By.id("idprof3")).clear();
+        driver.findElement(By.id("idprof3")).sendKeys("test2");
         driver.findElement(By.name("create")).click();
+        try {
+            assertEquals("test", driver.findElement(By.xpath("//div[@id='id-right']/div/div[2]/div[3]/div/table/tbody/tr[3]/td[2]")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
     }
 
     @After
